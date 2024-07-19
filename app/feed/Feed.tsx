@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styles from './Feed.module.css';
 
 export default function Feed({ feedId, ownerImageUrl, ownerName, timestamp, content }) {
 
@@ -23,19 +22,20 @@ export default function Feed({ feedId, ownerImageUrl, ownerName, timestamp, cont
 
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.ownerContainer} >
-                    <Image loader={imageLoader}
+            <div className='w-auto bg-[#141414] mx-[20px] mt-[20px] rounded-[10px] p-[20px]'>
+                <div className='w-auto flex' >
+                    <Image className='rounded-[10px]'
+                        loader={imageLoader}
                         src='owner.png'
-                        width={75}
-                        height={75}
+                        width={50}
+                        height={50}
                         alt='' />
-                    <div>
-                        <h1>{ownerName}</h1>
-                        <h2>{timestampToString(timestamp)}</h2>
+                    <div className='mx-[10px] content-center'>
+                        <h1 className='text-xl'>{ownerName}</h1>
+                        <h1 className='text-sm text-[#8d8d8d]'>{timestampToString(timestamp)}</h1>
                     </div>
                 </div>
-                <div className={styles.contentContainer}>
+                <div className='pt-[10px] '>
                     <p>{content}</p>
                 </div>
             </div>

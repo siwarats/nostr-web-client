@@ -1,6 +1,5 @@
 "use client";
 
-import styles from './NavBar.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from 'next/image';
@@ -15,13 +14,18 @@ export default function NavBar() {
         { title: 'Setting', navTo: '/setting' }
     ]
     return (
-        <div className={styles.container}>
+        <div className='w-auto h-full flex bg-[#141414]'>
             <ul>
                 <li><Image src={logo} alt="" /></li>
                 {
                     menuItems.map(
                         (item) => (
-                            <li><Link className={styles.button} to={item.navTo}>{item.title}</Link></li>
+                            <li>
+                                <Link className='flex text-white m-[10px] p-[10px] rounded-[5px] hover:bg-[#1f1f1f]'
+                                    to={item.navTo}>
+                                    {item.title}
+                                </Link>
+                            </li>
                         )
                     )
                 }

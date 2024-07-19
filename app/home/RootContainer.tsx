@@ -1,18 +1,17 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
-import styles from './RootContainer.module.css';
 
 export default function RootContainer() {
     return (
-        <div className={styles.rootContainer}>
-            <div className={styles.mainContainer}>
-                <div className={styles.leftContainer}>
+        <div className='flex justify-center'>
+            <div className='w-full max-w-[1280px] h-screen flex justify-between'>
+                <div className='flex w-1/5'>
                     <NavBar />
                 </div>
-                <div className={styles.middleContainer}>
+                <div className='flex w-3/5'>
                     <Outlet />
                 </div>
-                <div className={styles.rightContainer}>
+                <div className='flex w-1/5 bg-[#141414]'>
                     third
                 </div>
             </div>

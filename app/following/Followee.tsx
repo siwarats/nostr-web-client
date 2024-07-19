@@ -14,7 +14,7 @@ export default function Followee({ pubkey, followeeName, followeeImageUrl }) {
                 width={50}
                 height={50}
                 alt='' />
-            <div className='mx-[20px] content-center'>
+            <div className='mx-[10px] content-center'>
                 <h1 className='text-xl'>{followeeName}</h1>
                 <h2 className='text-sm text-[#8d8d8d]'>{pubkey}</h2>
             </div>
