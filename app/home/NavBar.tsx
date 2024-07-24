@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from 'next/image';
-import logo from '../../public/next.svg';
+import logo from '../../public/nostr.png';
 
 export default function NavBar() {
     const menuItems = [
@@ -14,13 +14,13 @@ export default function NavBar() {
         { title: 'Setting', navTo: '/setting' }
     ]
     return (
-        <div className='w-auto h-full flex bg-[#141414]'>
+        <div className='w-auto h-full flex pt-[20px]'>
             <ul>
                 <li><Image src={logo} alt="" /></li>
                 {
                     menuItems.map(
-                        (item) => (
-                            <li>
+                        (item, index) => (
+                            <li key={index}>
                                 <Link className='flex text-white m-[10px] p-[10px] rounded-[5px] hover:bg-[#1f1f1f]'
                                     to={item.navTo}>
                                     {item.title}

@@ -11,8 +11,12 @@ export default function RootContainer() {
                 <div className='flex w-3/5'>
                     <Outlet />
                 </div>
-                <div className='flex w-1/5 bg-[#141414]'>
-                    third
+                <div className='flex w-1/5'>
+                    <div className='pt-[20px]'>
+                        Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty
+                        Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty
+                        Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty
+                    </div>
                 </div>
             </div>
         </div>

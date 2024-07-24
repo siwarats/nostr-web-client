@@ -10,8 +10,10 @@ export default function Following() {
     return (
         <div className='w-full overflow-y-auto no-scrollbar'>
             {
-                items.map((item) =>
-                    <Followee pubkey={pubkey}
+                items.map((item, index) =>
+                    <Followee
+                        key={index}
+                        pubkey={pubkey}
                         followeeName={followeeName}
                         followeeImageUrl={followeeImageUrl} />
                 )
